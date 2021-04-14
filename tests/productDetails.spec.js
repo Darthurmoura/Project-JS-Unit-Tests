@@ -36,14 +36,14 @@ describe('#productDetails', () => {
     // assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray)
-    assert.equal(Array.isArray(productDetails("oi", "ola")), true);
+    assert.strictEqual(Array.isArray(productDetails('oi', 'ola')), true);
     // Teste que o array retornado pela função contém dois itens dentro.
-    assert.equal(Object.keys(productDetails("oi", "ola")).length, 2);
+    assert.strictEqual(Object.keys(productDetails('oi', 'ola')).length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
-    assert.deepStrictEqual(typeof productDetails("oi", "ola")[0] && typeof productDetails("oi", "ola")[1], 'object');
+    assert.deepStrictEqual(typeof productDetails('oi', 'ola')[0] && typeof productDetails('oi', 'ola')[1], 'object');
     // Teste que os dois objetos são diferentes entre si.
-    assert.notDeepStrictEqual(productDetails("oi", "ola")[0], productDetails("oi", "ola")[1]);
+    assert.notDeepStrictEqual(productDetails('oi', 'ola')[0], productDetails('oi', 'ola')[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.equal(productDetails("oi", "ola")[0].details.productId.endsWith('123') && productDetails("oi", "ola")[1].details.productId.endsWith('123'), true);
+    assert.strictEqual(productDetails('oi', 'ola')[0].details.productId.endsWith('123') && productDetails('oi', 'ola')[1].details.productId.endsWith('123'), true);
   });
 });

@@ -1,1 +1,1 @@
-sum/roundedArr.length
+myCounter()
